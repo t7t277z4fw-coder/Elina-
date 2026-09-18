@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для Элины ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+  overflow:hidden;
+}
+.card{
+  width:90%;
+  max-width:420px;
+  padding:40px 25px;
+  text-align:center;
+  background:rgba(255,255,255,.9);
+  border-radius:30px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+h1{
+  color:#e91e63;
+  font-size:38px;
+  margin:0 0 15px;
+}
+p{
+  color:#555;
+  font-size:20px;
+  line-height:1.5;
+}
+.heart{
+  font-size:70px;
+  animation:beat 1s infinite;
+}
+button{
+  border:0;
+  padding:15px 30px;
+  border-radius:30px;
+  background:#e91e63;
+  color:white;
+  font-size:18px;
+  margin:10px;
+  cursor:pointer;
+}
+button:hover{transform:scale(1.05)}
+#answer{
+  display:none;
+  color:#e91e63;
+  font-size:24px;
+  font-weight:bold;
+}
+@keyframes beat{
+  50%{transform:scale(1.2)}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="heart">❤️</div>
+  <h1>Элина</h1>
+
+  <p>
+    У меня есть один очень важный вопрос...
+    <br><br>
+    Ты согласишься провести со мной особенный вечер? 🌹
+  </p>
+
+  <button onclick="yes()">Да ❤️</button>
+  <button onclick="no()">Нет 🙈</button>
+
+  <div id="answer">
+    Я знал, что ты согласишься ❤️🥰
+    <br><br>
+    Тогда это свидание для нас!
+  </div>
+</div>
+
+<script>
+function yes(){
+  document.getElementById("answer").style.display="block";
+}
+function no(){
+  alert("Подумай ещё раз 😄❤️");
+}
+</script>
+
+</body>
+</html>
